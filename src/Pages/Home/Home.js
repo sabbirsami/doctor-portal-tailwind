@@ -2,11 +2,12 @@ import React from "react";
 
 import heroImg from "../../assets/images/chair.png";
 import arrow from "../../assets/icons/icons8-arrow-24.png";
+import ProgressSection from "../ProgressSection/ProgressSection";
 
 const Home = () => {
     return (
         <div>
-            <div className="hero min-h-[90vh] ">
+            <div className="hero min-h-[80vh] ">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <img
                         src={heroImg}
@@ -28,6 +29,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+            <ProgressSection></ProgressSection>
         </div>
     );
 };
