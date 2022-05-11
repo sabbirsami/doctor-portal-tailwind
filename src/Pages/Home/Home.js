@@ -4,6 +4,7 @@ import heroImg from "../../assets/images/chair.png";
 import arrow from "../../assets/icons/icons8-arrow-24.png";
 import ProgressSection from "../ProgressSection/ProgressSection";
 import Info from "./Info";
+import Service from "../Services/Service";
 
 const Home = () => {
     return (
@@ -36,6 +37,7 @@ const Home = () => {
             </div>
             <ProgressSection></ProgressSection>
             <Info></Info>
+            <Service></Service>
         </div>
     );
 };
