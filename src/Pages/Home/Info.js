@@ -7,9 +7,21 @@ import marker from "../../assets/icons/marker.svg";
 const Info = () => {
     return (
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 px-14 ">
-            <InfoCard img={clock}></InfoCard>
-            <InfoCard img={marker}></InfoCard>
-            <InfoCard img={phone}></InfoCard>
+            <InfoCard
+                cardBody="Simply dummy text  to listen on app."
+                cardTitle="Opening Hours"
+                img={clock}
+            ></InfoCard>
+            <InfoCard
+                cardBody="Brooklyn, NY 10036, United States"
+                cardTitle="Visit our location"
+                img={marker}
+            ></InfoCard>
+            <InfoCard
+                cardBody="+000 123 456789"
+                cardTitle="Contact us now"
+                img={phone}
+            ></InfoCard>
         </div>
     );
 };
