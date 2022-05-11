@@ -55,7 +55,7 @@ const Navbar = () => {
                     Doctors Portal
                 </a>
             </div>
-            <div className="navbar-center hidden lg:flex">
+            <div className="navbar-end hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">{menuItems}</ul>
             </div>
         </div>
