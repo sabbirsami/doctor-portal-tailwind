@@ -1,7 +1,5 @@
 import React from "react";
-
 import heroImg from "../../assets/images/chair.png";
-
 import ProgressSection from "../ProgressSection/ProgressSection";
 import Info from "./Info";
 import Service from "../Services/Service";
@@ -17,6 +15,7 @@ const Home = () => {
                     <img
                         src={heroImg}
                         className="max-w-lg rounded shadow-2xl"
+                        alt=""
                     />
                     <div>
                         <h1 className="text-6xl font-bold">

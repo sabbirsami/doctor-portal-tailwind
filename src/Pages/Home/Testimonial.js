@@ -33,10 +33,10 @@ const Testimonial = () => {
         <section className="my-28  px-14">
             <div className="flex justify-between px-14">
                 <div>
-                    <h4 class="text-xl font-bold text-primary py-2">
+                    <h4 className="text-xl font-bold text-primary py-2">
                         Testimonial
                     </h4>
-                    <h2 class="text-5xl ">What Our Patients Says</h2>
+                    <h2 className="text-5xl ">What Our Patients Says</h2>
                 </div>
                 <div className="">
                     <img src={quote} className="w-24 lg:w-48 " alt="" />

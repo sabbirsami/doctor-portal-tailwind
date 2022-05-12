@@ -4,7 +4,7 @@ const Review = ({ review }) => {
     return (
         <div className="card lg:max-w-lg bg-base-100 shadow-xl justify-between">
             <div className="card-body">
-                <p>
+                <p className="py-5">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Recusandae, voluptates quo incidunt harum minus mollitia!
                 </p>

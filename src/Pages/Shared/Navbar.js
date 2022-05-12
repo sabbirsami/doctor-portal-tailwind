@@ -51,7 +51,8 @@ const Navbar = () => {
                         {menuItems}
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl">
+
+                <a href="#" className="btn btn-ghost normal-case text-xl">
                     Doctors Portal
                 </a>
             </div>
