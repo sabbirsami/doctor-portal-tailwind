@@ -7,6 +7,7 @@ import Info from "./Info";
 import Service from "../Services/Service";
 import Appointment from "../Appointment/Appointment";
 import PrimaryButton from "../Shared/PrimaryButton";
+import Testimonial from "./Testimonial";
 
 const Home = () => {
     return (
@@ -34,6 +35,7 @@ const Home = () => {
             <Info></Info>
             <Service></Service>
             <Appointment></Appointment>
+            <Testimonial></Testimonial>
         </div>
     );
 };

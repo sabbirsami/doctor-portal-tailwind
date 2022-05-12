@@ -73,8 +73,8 @@ const Service = () => {
             </div>
 
             {/* SERVICE SECTION PART 02 */}
-            <div>
-                <div class="hero py-14">
+            <div className="pb-14">
+                <div class="hero py-14 ">
                     <div class="hero-content flex-col lg:flex-row">
                         <img
                             src={treatment}
