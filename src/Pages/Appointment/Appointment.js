@@ -1,6 +1,7 @@
 import React from "react";
 import appointmentBg from "../../assets/images/appointment.png";
 import doctor from "../../assets/images/doctor.png";
+import PrimaryButton from "../Shared/PrimaryButton";
 
 const Appointment = () => {
     return (
@@ -17,7 +18,7 @@ const Appointment = () => {
                     <div class="hero-content p-[0px] flex-col lg:flex-row">
                         <img className="mt-[-200px] w-[60%]" src={doctor} />
                         <div className="text-white">
-                            <h5 class="text-xl font-bold text-primary">
+                            <h5 class="text-xl font-bold text-primary py-2">
                                 Appointment
                             </h5>
                             <h1 class="text-5xl font-bold ">
@@ -29,7 +30,7 @@ const Appointment = () => {
                                 quasi. In deleniti eaque aut repudiandae et a id
                                 nisi.
                             </p>
-                            <button class="btn btn-primary">Get Started</button>
+                            <PrimaryButton></PrimaryButton>
                         </div>
                     </div>
                 </div>

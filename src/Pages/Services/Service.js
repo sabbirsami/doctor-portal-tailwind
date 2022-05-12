@@ -4,6 +4,7 @@ import fluoride from "../../assets/images/fluoride.png";
 import teeth from "../../assets/images/whitening.png";
 import cavity from "../../assets/images/cavity.png";
 import treatment from "../../assets/images/treatment.png";
+import PrimaryButton from "../Shared/PrimaryButton";
 
 const Service = () => {
     return (
@@ -87,14 +88,7 @@ const Service = () => {
                                 quasi. In deleniti eaque aut repudiandae et a id
                                 nisi.
                             </p>
-                            <button className="btn btn-primary bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-blue-500 hover:to-cyan-500 px-8 rounded-full text-white shadow-2xl">
-                                Get Started{" "}
-                                <img
-                                    className="pl-3 color-white"
-                                    src={arrow}
-                                    alt=""
-                                />
-                            </button>
+                            <PrimaryButton></PrimaryButton>
                         </div>
                     </div>
                 </div>
