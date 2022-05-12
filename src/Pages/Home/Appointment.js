@@ -16,7 +16,11 @@ const Appointment = () => {
             <section>
                 <div className="">
                     <div className="hero-content p-[0px] flex-col lg:flex-row">
-                        <img className="mt-[-200px] w-[60%]" src={doctor} />
+                        <img
+                            className="mt-[-200px] w-[60%] hidden lg:block"
+                            src={doctor}
+                            alt=""
+                        />
                         <div className="text-white">
                             <h5 className="text-xl font-bold text-primary py-2">
                                 Appointment
