@@ -73,13 +73,13 @@ const Service = () => {
 
             {/* SERVICE SECTION PART 02 */}
             <div>
-                <div class="hero">
+                <div class="hero py-14">
                     <div class="hero-content flex-col lg:flex-row">
                         <img
                             src={treatment}
                             class="max-w-lg rounded-lg shadow-2xl"
                         />
-                        <div className="w-68">
+                        <div className="lg:pl-14 pl-0">
                             <h1 class="text-5xl font-bold">Box Office News!</h1>
                             <p class="py-6 text-xl">
                                 Provident cupiditate voluptatem et in. Quaerat

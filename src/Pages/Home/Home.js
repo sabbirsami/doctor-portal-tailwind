@@ -5,6 +5,7 @@ import arrow from "../../assets/icons/icons8-arrow-24.png";
 import ProgressSection from "../ProgressSection/ProgressSection";
 import Info from "./Info";
 import Service from "../Services/Service";
+import Appointment from "../Appointment/Appointment";
 
 const Home = () => {
     return (
@@ -38,6 +39,7 @@ const Home = () => {
             <ProgressSection></ProgressSection>
             <Info></Info>
             <Service></Service>
+            <Appointment></Appointment>
         </div>
     );
 };
