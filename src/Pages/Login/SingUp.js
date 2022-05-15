@@ -7,7 +7,8 @@ import auth from "../../firebase.init";
 import { useForm } from "react-hook-form";
 import Loading from "../Shared/Loading";
 import { Link } from "react-router-dom";
-const Login = () => {
+
+const SingUp = () => {
     const {
         register,
         formState: { errors },
@@ -42,9 +43,32 @@ const Login = () => {
                 <div className="card w-96 bg-base-100 shadow-xl">
                     <div className="card-body">
                         <h2 className="text-center text-2xl font-bold">
-                            Login
+                            Sing Up
                         </h2>
                         <form onSubmit={handleSubmit(onSubmit)}>
+                            <div className="form-control w-full max-w-xs">
+                                <label className="label">
+                                    <span className="label-text">Name</span>
+                                </label>
+                                <input
+                                    type="text"
+                                    placeholder="Your Name"
+                                    className="input input-bordered w-full max-w-xs"
+                                    {...register("name", {
+                                        required: {
+                                            value: true,
+                                            message: "Name is Required",
+                                        },
+                                    })}
+                                />
+                                <label className="label">
+                                    {errors.name?.type === "required" && (
+                                        <span className="label-text-alt text-red-500">
+                                            {errors.name.message}
+                                        </span>
+                                    )}
+                                </label>
+                            </div>
                             <div className="form-control w-full max-w-xs">
                                 <label className="label">
                                     <span className="label-text">Email</span>
@@ -114,16 +138,15 @@ const Login = () => {
                             <input
                                 className="btn  w-full max-w-xs"
                                 type="submit"
-                                value={"Login"}
+                                value={"Sign Up"}
                             />
                         </form>
                         <p>
                             <small>
-                                Dont have account?{" "}
-                                <Link
-                                    className="text-primary"
-                                    to="/singin"
-                                ></Link>
+                                Already have an account?{" "}
+                                <Link className="text-primary" to="/login">
+                                    Login
+                                </Link>
                             </small>
                         </p>
                         <div class="divider">OR</div>
@@ -140,4 +163,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default SingUp;
