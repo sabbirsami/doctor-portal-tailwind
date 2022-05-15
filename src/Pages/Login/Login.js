@@ -8,9 +8,9 @@ import { useForm } from "react-hook-form";
 import Loading from "../Shared/Loading";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 const Login = () => {
-    let from = location.state?.from?.pathname || "/";
     let navigate = useNavigate();
     let location = useLocation();
+    let from = location.state?.from?.pathname || "/";
 
     const {
         register,
