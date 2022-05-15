@@ -1,12 +1,13 @@
 import React from "react";
 import {
     useSignInWithGoogle,
-    useSignInWithEmailAndPassword,
+    useCreateUserWithEmailAndPassword,
 } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 import { useForm } from "react-hook-form";
 import Loading from "../Shared/Loading";
 import { Link } from "react-router-dom";
+import { useUpdateProfile } from "react-firebase-hooks/auth";
 
 const SingUp = () => {
     const {
@@ -14,11 +15,9 @@ const SingUp = () => {
         formState: { errors },
         handleSubmit,
     } = useForm();
-
-    const [signInWithEmailAndPassword, user, loading, error] =
-        useSignInWithEmailAndPassword(auth);
-
-    const onSubmit = (data) => console.log(data);
+    const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+    const [createUserWithEmailAndPassword, user, loading, error] =
+        useCreateUserWithEmailAndPassword(auth);
 
     const [signInWithGoogle, googleUser, googleLoading, googleError] =
         useSignInWithGoogle(auth);
@@ -26,17 +25,27 @@ const SingUp = () => {
     if (googleUser || user) {
         console.log(googleUser);
     }
-    if (googleLoading || loading) {
+    if (googleLoading || loading || updating) {
         return <Loading></Loading>;
     }
     let signInError;
-    if (googleError || error) {
+    if (googleError || error || updateError) {
         signInError = (
             <p className=" text-red-500">
-                <small>{error?.message || googleError?.message}</small>
+                <small>
+                    {error?.message ||
+                        googleError?.message ||
+                        updateError?.message}
+                </small>
             </p>
         );
     }
+
+    const onSubmit = async (data) => {
+        await createUserWithEmailAndPassword(data.email, data.password);
+        console.log(data);
+        await updateProfile({ displayName: data.name });
+    };
     return (
         <div>
             <div className="flex h-screen justify-center items-center">

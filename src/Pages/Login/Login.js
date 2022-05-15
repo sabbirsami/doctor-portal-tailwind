@@ -17,7 +17,10 @@ const Login = () => {
     const [signInWithEmailAndPassword, user, loading, error] =
         useSignInWithEmailAndPassword(auth);
 
-    const onSubmit = (data) => console.log(data);
+    const onSubmit = (data) => {
+        signInWithEmailAndPassword(data.email, data.password);
+        console.log(data);
+    };
 
     const [signInWithGoogle, googleUser, googleLoading, googleError] =
         useSignInWithGoogle(auth);
@@ -120,10 +123,9 @@ const Login = () => {
                         <p>
                             <small>
                                 Dont have account?{" "}
-                                <Link
-                                    className="text-primary"
-                                    to="/singin"
-                                ></Link>
+                                <Link className="text-primary" to="/signup">
+                                    Create account
+                                </Link>
                             </small>
                         </p>
                         <div class="divider">OR</div>
