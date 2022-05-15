@@ -6,10 +6,13 @@ import {
 import auth from "../../firebase.init";
 import { useForm } from "react-hook-form";
 import Loading from "../Shared/Loading";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useUpdateProfile } from "react-firebase-hooks/auth";
 
 const SingUp = () => {
+    let from = location.state?.from?.pathname || "/";
+    let navigate = useNavigate();
+    let location = useLocation();
     const {
         register,
         formState: { errors },
@@ -24,6 +27,7 @@ const SingUp = () => {
 
     if (googleUser || user) {
         console.log(googleUser);
+        navigate(from, { replace: true });
     }
     if (googleLoading || loading || updating) {
         return <Loading></Loading>;
