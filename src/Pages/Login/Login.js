@@ -133,9 +133,9 @@ const Login = () => {
                                 </Link>
                             </small>
                         </p>
-                        <div class="divider">OR</div>
+                        <div className="divider">OR</div>
                         <button
-                            class="btn btn-outline"
+                            className="btn btn-outline"
                             onClick={() => signInWithGoogle()}
                         >
                             Continue with google
