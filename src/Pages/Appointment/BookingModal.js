@@ -1,19 +1,60 @@
 import { format } from "date-fns";
 import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
+import toast from "react-hot-toast";
 import auth from "../../firebase.init";
 
-const BookingModal = ({ date, treatment, setTreatment }) => {
-    const [user, loading] = useAuthState(auth);
+const BookingModal = ({ date, treatment, setTreatment, refetch }) => {
+    const [user] = useAuthState(auth);
     const { _id, name, slots } = treatment;
+    const formattedDate = format(date, "PP");
     const handleBooking = (event) => {
         event.preventDefault();
         const slot = event.target.slot.value;
         console.log(_id, name, slot);
 
-        // TO CLOSE THE MODAL
-        setTreatment(null);
+        const booking = {
+            treatmentId: _id,
+            treatment: name,
+            date: formattedDate,
+            slot,
+            patient: user.email,
+            patientName: user.displayName,
+            phone: event.target.phone.value,
+        };
+
+        fetch("http://localhost:5000/booking", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(booking),
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                if (data.success) {
+                    console.log(data);
+                    toast.success(
+                        `Appointment is set, ${formattedDate} at ${slot}`,
+                        {
+                            duration: 3000,
+                        }
+                    );
+                } else {
+                    console.log(data);
+                    toast.error(
+                        `Already have and appointment on ${data.booking?.date} at ${data.booking?.slot}`,
+                        {
+                            duration: 3000,
+                        }
+                    );
+                }
+                refetch();
+                // TO CLOSE THE MODAL
+                setTreatment(null);
+            });
     };
+
     return (
         <div>
             <input
@@ -44,8 +85,10 @@ const BookingModal = ({ date, treatment, setTreatment }) => {
                             name="slot"
                             className="select select-bordered w-full max-w-xs"
                         >
-                            {slots.map((slot) => (
-                                <option value={slot}>{slot}</option>
+                            {slots.map((slot, index) => (
+                                <option key={index} value={slot}>
+                                    {slot}
+                                </option>
                             ))}
                         </select>
                         <input

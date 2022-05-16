@@ -10,9 +10,9 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useUpdateProfile } from "react-firebase-hooks/auth";
 
 const SingUp = () => {
-    let from = location.state?.from?.pathname || "/";
     let navigate = useNavigate();
     let location = useLocation();
+    let from = location.state?.from?.pathname || "/";
     const {
         register,
         formState: { errors },

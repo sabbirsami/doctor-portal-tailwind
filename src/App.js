@@ -1,5 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import { Toaster } from "react-hot-toast";
+
 import About from "./Pages/About/About";
 import RequireAuth from "./Pages/Login/RequireAuth";
 import AppointmentPage from "./Pages/Appointment/AppointmentPage";
@@ -28,6 +30,7 @@ function App() {
                 <Route path="/signup" element={<SingUp />} />
             </Routes>
             <Footer></Footer>
+            <Toaster position="top-center" reverseOrder={false} />
         </div>
     );
 }

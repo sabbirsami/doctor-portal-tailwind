@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
     useSignInWithGoogle,
     useSignInWithEmailAndPassword,
@@ -29,10 +29,12 @@ const Login = () => {
     const [signInWithGoogle, googleUser, googleLoading, googleError] =
         useSignInWithGoogle(auth);
 
-    if (googleUser || user) {
-        console.log(googleUser);
-        navigate(from, { replace: true });
-    }
+    useEffect(() => {
+        if (googleUser || user) {
+            navigate(from, { replace: true });
+        }
+    }, [googleUser, user, navigate, from]);
+
     if (googleLoading || loading) {
         return <Loading></Loading>;
     }
