@@ -1,6 +1,6 @@
 import { format } from "date-fns";
 import { useQuery } from "react-query";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import AppointmentService from "./AppointmentService";
 import BookingModal from "./BookingModal";
 import Loading from "../Shared/Loading";
@@ -21,6 +21,9 @@ const AvailableAppointment = ({ date }) => {
     );
     if (isLoading) {
         return <Loading></Loading>;
+    }
+    if (error) {
+        console.log(error);
     }
     // useEffect(() => {
     //     fetch(`http://localhost:5000/available?date=${formattedDate}`)
