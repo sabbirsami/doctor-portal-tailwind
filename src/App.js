@@ -3,6 +3,8 @@ import "./App.css";
 import { Toaster } from "react-hot-toast";
 
 import About from "./Pages/About/About";
+import MyReview from "./Pages/Dashboard/MyReview";
+import Users from "./Pages/Dashboard/Users";
 import RequireAuth from "./Pages/Login/RequireAuth";
 import AppointmentPage from "./Pages/Appointment/AppointmentPage";
 import Home from "./Pages/Home/Home";
@@ -43,8 +45,9 @@ function App() {
                     ></Route>
                     <Route
                         path="review"
-                        element={<MyAppointments></MyAppointments>}
+                        element={<MyReview></MyReview>}
                     ></Route>
+                    <Route path="users" element={<Users></Users>}></Route>
                 </Route>
 
                 <Route path="/login" element={<Login />} />

@@ -8,6 +8,7 @@ import { useForm } from "react-hook-form";
 import Loading from "../Shared/Loading";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useUpdateProfile } from "react-firebase-hooks/auth";
+import useToken from "../../hooks/useToken";
 
 const SingUp = () => {
     let navigate = useNavigate();
@@ -25,13 +26,16 @@ const SingUp = () => {
     const [signInWithGoogle, googleUser, googleLoading, googleError] =
         useSignInWithGoogle(auth);
 
-    if (googleUser || user) {
-        console.log(googleUser);
+    const [token] = useToken(googleUser || user);
+
+    if (token) {
         navigate(from, { replace: true });
     }
+
     if (googleLoading || loading || updating) {
         return <Loading></Loading>;
     }
+
     let signInError;
     if (googleError || error || updateError) {
         signInError = (
