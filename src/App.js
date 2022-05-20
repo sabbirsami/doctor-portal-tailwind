@@ -14,6 +14,7 @@ import Footer from "./Pages/Shared/Footer";
 import Navbar from "./Pages/Shared/Navbar";
 import Dashboard from "./Pages/Dashboard/Dashboard";
 import MyAppointments from "./Pages/Dashboard/MyAppointments";
+import AddDoctor from "./Pages/Dashboard/AddDoctor";
 
 function App() {
     return (
@@ -48,6 +49,10 @@ function App() {
                         element={<MyReview></MyReview>}
                     ></Route>
                     <Route path="users" element={<Users></Users>}></Route>
+                    <Route
+                        path="addDoctor"
+                        element={<AddDoctor></AddDoctor>}
+                    ></Route>
                 </Route>
 
                 <Route path="/login" element={<Login />} />

@@ -14,6 +14,7 @@ const Users = () => {
     if (isLoading) {
         return <Loading></Loading>;
     }
+
     const { email, role } = users;
     console.log(users);
 
