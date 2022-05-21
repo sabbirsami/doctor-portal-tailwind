@@ -16,10 +16,9 @@ const Users = () => {
     }
 
     const { email, role } = users;
-    console.log(users);
 
     const makeAdmin = () => {
-        fetch(`http://localhost:5000/user/admin/${email}`, {
+        fetch(`http://localhost:5000/user/${email}`, {
             method: "PUT",
             headers: {
                 authorization: `Bearer ${localStorage.getItem("accessToken")}`,

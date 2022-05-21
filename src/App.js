@@ -15,6 +15,7 @@ import Navbar from "./Pages/Shared/Navbar";
 import Dashboard from "./Pages/Dashboard/Dashboard";
 import MyAppointments from "./Pages/Dashboard/MyAppointments";
 import AddDoctor from "./Pages/Dashboard/AddDoctor";
+import ManageDoctor from "./Pages/Dashboard/ManageDoctor";
 
 function App() {
     return (
@@ -52,6 +53,10 @@ function App() {
                     <Route
                         path="addDoctor"
                         element={<AddDoctor></AddDoctor>}
+                    ></Route>
+                    <Route
+                        path="manageDoctor"
+                        element={<ManageDoctor></ManageDoctor>}
                     ></Route>
                 </Route>
 
