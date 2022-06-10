@@ -44,7 +44,7 @@ const Navbar = () => {
         </>
     );
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-base-100 justify-center">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex="0" className="btn btn-ghost lg:hidden">
@@ -81,7 +81,7 @@ const Navbar = () => {
             <div className="navbar-end">
                 <label
                     tabIndex="1"
-                    for="my-drawer-2"
+                    htmlFor="my-drawer-2"
                     className="btn btn-ghost lg:hidden"
                 >
                     <svg

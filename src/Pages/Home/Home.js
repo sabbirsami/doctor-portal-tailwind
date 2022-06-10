@@ -10,7 +10,7 @@ const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <ProgressSection></ProgressSection>
+            {/* <ProgressSection></ProgressSection> */}
             <Info></Info>
             <Service></Service>
             <Appointment></Appointment>

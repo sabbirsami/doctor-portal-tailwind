@@ -3,7 +3,7 @@ import React from "react";
 const DeleteConfirmModal = () => {
     return (
         <>
-            <label for="my-modal-6" class="btn modal-button">
+            <label htmlFor="my-modal-6" class="btn modal-button">
                 open modal
             </label>
 
@@ -18,7 +18,7 @@ const DeleteConfirmModal = () => {
                         subscription to use Wikipedia for free!
                     </p>
                     <div class="modal-action">
-                        <label for="my-modal-6" class="btn">
+                        <label htmlFor="my-modal-6" class="btn">
                             Yay!
                         </label>
                     </div>

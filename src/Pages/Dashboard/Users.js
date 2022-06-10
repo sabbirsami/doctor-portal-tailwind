@@ -15,10 +15,9 @@ const Users = () => {
         return <Loading></Loading>;
     }
 
-    const { email, role } = users;
-
-    const makeAdmin = () => {
-        fetch(`http://localhost:5000/user/${email}`, {
+    const makeAdmin = (email) => {
+        console.log(users);
+        fetch(`http://localhost:5000/user/admin/${email}`, {
             method: "PUT",
             headers: {
                 authorization: `Bearer ${localStorage.getItem("accessToken")}`,
@@ -53,9 +52,9 @@ const Users = () => {
                                 <th>{index + 1}</th>
                                 <td>{a.email}</td>
                                 <td>
-                                    {role !== "admin" && (
+                                    {a.role !== "admin" && (
                                         <button
-                                            onClick={makeAdmin}
+                                            onClick={() => makeAdmin(a.email)}
                                             className="btn btn-xs"
                                         >
                                             Make an Admin

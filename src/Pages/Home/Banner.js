@@ -5,18 +5,13 @@ import PrimaryButton from "../Shared/PrimaryButton";
 const Banner = () => {
     return (
         <div>
-            <div className="hero min-h-[80vh] ">
-                <div className="hero-content flex-col lg:flex-row-reverse">
-                    <img
-                        src={heroImg}
-                        className="max-w-lg rounded shadow-2xl"
-                        alt=""
-                    />
+            <div className="hero min-h-[60vh] ">
+                <div className="hero-content text-center flex-col lg:flex-row-reverse">
                     <div>
                         <h1 className="text-6xl font-bold">
                             Your New Smile Starts Here
                         </h1>
-                        <p className="py-6 pr-8 text-xl">
+                        <p className="py-6 lg:px-48 text-xl">
                             Provident cupiditate voluptatem et in. Quaerat
                             fugiat ut assumenda excepturi exercitationem quasi.
                             In deleniti eaque aut repudiandae et a id nisi.

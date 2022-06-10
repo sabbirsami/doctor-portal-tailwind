@@ -51,8 +51,8 @@ const ManageDoctor = () => {
                             <tr key={index}>
                                 <th>{index + 1}</th>
                                 <td>
-                                    <div class="avatar">
-                                        <div class="w-16 rounded">
+                                    <div className="avatar">
+                                        <div className="w-16 rounded">
                                             <img
                                                 src={doctor.image}
                                                 alt="Tailwind-CSS-Avatar-component"
@@ -67,7 +67,7 @@ const ManageDoctor = () => {
                                         onClick={() =>
                                             handleDelete(doctor.email)
                                         }
-                                        class="btn btn-error btn-xs"
+                                        className="btn btn-error btn-xs"
                                     >
                                         Delete
                                     </button>
