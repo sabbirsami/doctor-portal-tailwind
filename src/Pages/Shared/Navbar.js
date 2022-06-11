@@ -78,7 +78,7 @@ const Navbar = () => {
             <div className="navbar-end hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">{menuItems}</ul>
             </div>
-            <div className="navbar-end">
+            <div className="navbar-end lg:hidden">
                 <label
                     tabIndex="1"
                     htmlFor="my-drawer-2"
