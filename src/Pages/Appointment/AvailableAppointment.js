@@ -31,7 +31,7 @@ const AvailableAppointment = ({ date }) => {
     //         .then((data) => setServices(data));
     // }, [formattedDate]);
     return (
-        <div>
+        <div className="container mx-auto">
             <h5 className="text-xl text-primary text-center ">
                 Available Appointment on {format(date, "PP")}
             </h5>
