@@ -6,8 +6,8 @@ import PrimaryButton from "../Shared/PrimaryButton";
 const Appointment = () => {
     return (
         <div className="bg-sky-200">
-            <section>
-                <div className="py-24 lg:pl-24">
+            <section className="container mx-auto">
+                <div className="py-24 px-4 lg:pl-24">
                     <div className="hero-content p-[0px] flex-col lg:flex-row">
                         <div className="text-dark">
                             <h5 className="text-xl font-bold text-sky-900 py-2">
