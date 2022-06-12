@@ -7,7 +7,7 @@ const InfoCard = ({ img, cardBody, cardTitle }) => {
                 <figure className="pl-14">
                     <img src={img} alt="Album" />
                 </figure>
-                <div className="card-body ">
+                <div className="card-body">
                     <h2 className="card-title">{cardTitle}</h2>
                     <p>{cardBody}</p>
                 </div>

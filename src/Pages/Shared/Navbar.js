@@ -13,23 +13,35 @@ const Navbar = () => {
     const menuItems = (
         <>
             <li>
-                <Link to="/">Home</Link>
+                <Link className="p-3 text-sm font-semibold" to="/">
+                    HOME
+                </Link>
             </li>
             <li>
-                <Link to="/appointment">Appointment</Link>
+                <Link className="p-3 text-sm font-semibold" to="/appointment">
+                    APPOINTMENT
+                </Link>
             </li>
             <li>
-                <Link to="/review">Review</Link>
+                <Link className="p-3 text-sm font-semibold" to="/review">
+                    REVIEW
+                </Link>
             </li>
             <li>
-                <Link to="/contact">Contact</Link>
+                <Link className="p-3 text-sm font-semibold" to="/contact">
+                    CONTACT
+                </Link>
             </li>
             <li>
-                <Link to="/about">About</Link>
+                <Link className="p-3 text-sm font-semibold" to="/about">
+                    ABOUT
+                </Link>
             </li>
             {user && (
                 <li>
-                    <Link to="/dashboard">Dashboard</Link>
+                    <Link className="p-3 text-sm font-semibold" to="/dashboard">
+                        DASHBOARD
+                    </Link>
                 </li>
             )}
             <li>
@@ -73,7 +85,7 @@ const Navbar = () => {
                     </div>
 
                     <p className="btn btn-ghost normal-case text-xl">
-                        Doctors Portal
+                        Teeth Health
                     </p>
                 </div>
                 <div className="navbar-end hidden lg:flex">

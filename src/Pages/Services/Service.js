@@ -7,7 +7,7 @@ import PrimaryButton from "../Shared/PrimaryButton";
 
 const Service = () => {
     return (
-        <>
+        <div className="container mx-auto">
             <div className="py-14">
                 <div className="serviceTitle items-center text-center">
                     <h6 className="text-xl text-primary py-3">OUR SERVICES</h6>
@@ -74,30 +74,7 @@ const Service = () => {
             </div>
 
             {/* SERVICE SECTION PART 02 */}
-            <div className="pb-14">
-                <div className="hero py-14 ">
-                    <div className="hero-content flex-col lg:flex-row">
-                        <img
-                            src={treatment}
-                            className="max-w-lg rounded-lg shadow-2xl"
-                            alt=""
-                        />
-                        <div className="lg:pl-14 pl-0">
-                            <h1 className="text-5xl font-bold">
-                                Box Office News!
-                            </h1>
-                            <p className="py-6 text-xl">
-                                Provident cupiditate voluptatem et in. Quaerat
-                                fugiat ut assumenda excepturi exercitationem
-                                quasi. In deleniti eaque aut repudiandae et a id
-                                nisi.
-                            </p>
-                            <PrimaryButton></PrimaryButton>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </>
+        </div>
     );
 };
 

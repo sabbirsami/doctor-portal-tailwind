@@ -7,7 +7,7 @@ import marker from "../../assets/icons/marker.svg";
 const Info = () => {
     return (
         <div className="container mx-auto">
-            <div className="lg:bg-slate-100  rounded-2xl grid grid-cols-1 lg:grid-cols-3 gap-10 px-14 ">
+            <div className="lg:bg-slate-100 rounded-2xl grid grid-cols-1 lg:grid-cols-3 gap-10 px-14 ">
                 <InfoCard
                     cardBody="Simply text to listen on app."
                     cardTitle="Opening Hours"

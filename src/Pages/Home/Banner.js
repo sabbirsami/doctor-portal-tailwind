@@ -5,7 +5,7 @@ import PrimaryButton from "../Shared/PrimaryButton";
 const Banner = () => {
     return (
         <div className="container mx-auto">
-            <div className="hero lg:min-h-[85vh] ">
+            <div className="hero lg:min-h-[88vh] ">
                 <div className="hero-content text-center flex-col lg:flex-row-reverse">
                     <div>
                         <div className="mx-auto text-center py-5">

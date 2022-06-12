@@ -5,24 +5,12 @@ import PrimaryButton from "../Shared/PrimaryButton";
 
 const Appointment = () => {
     return (
-        <div
-            style={{
-                background: `url(${appointmentBg})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-            }}
-            className="my-14"
-        >
+        <div className="bg-sky-200">
             <section>
-                <div className="">
+                <div className="py-24 lg:pl-24">
                     <div className="hero-content p-[0px] flex-col lg:flex-row">
-                        <img
-                            className="mt-[-200px] w-[60%] hidden lg:block"
-                            src={doctor}
-                            alt=""
-                        />
-                        <div className="text-white">
-                            <h5 className="text-xl font-bold text-primary py-2">
+                        <div className="text-dark">
+                            <h5 className="text-xl font-bold text-sky-900 py-2">
                                 Appointment
                             </h5>
                             <h1 className="text-5xl font-bold ">
