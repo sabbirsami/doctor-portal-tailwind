@@ -1,5 +1,6 @@
 import React from "react";
 import heroImg from "../../assets/images/chair.png";
+import { IoIosArrowDropright } from "react-icons/io";
 import PrimaryButton from "../Shared/PrimaryButton";
 
 const Banner = () => {
@@ -38,7 +39,11 @@ const Banner = () => {
                             fugiat ut assumenda excepturi exercitationem quasi.
                             In deleniti eaque aut repudiandae et a id nisi.
                         </p>
-                        <PrimaryButton></PrimaryButton>
+                        <button className="btn btn-outline border-2  mr-4 border-sky-200 px-8 rounded-full shadow-2xl">
+                            Contact{" "}
+                            {/* <IoIosArrowDropright className="text-xl ml-4"></IoIosArrowDropright> */}
+                        </button>
+                        <PrimaryButton></PrimaryButton>{" "}
                     </div>
                 </div>
             </div>
