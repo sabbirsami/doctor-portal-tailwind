@@ -6,22 +6,24 @@ import marker from "../../assets/icons/marker.svg";
 
 const Info = () => {
     return (
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 px-14 ">
-            <InfoCard
-                cardBody="Simply dummy text  to listen on app."
-                cardTitle="Opening Hours"
-                img={clock}
-            ></InfoCard>
-            <InfoCard
-                cardBody="Brooklyn, NY 10036, United States"
-                cardTitle="Visit our location"
-                img={marker}
-            ></InfoCard>
-            <InfoCard
-                cardBody="+000 123 456789"
-                cardTitle="Contact us now"
-                img={phone}
-            ></InfoCard>
+        <div className="container mx-auto">
+            <div className="lg:bg-slate-100  rounded-2xl grid grid-cols-1 lg:grid-cols-3 gap-10 px-14 ">
+                <InfoCard
+                    cardBody="Simply text to listen on app."
+                    cardTitle="Opening Hours"
+                    img={clock}
+                ></InfoCard>
+                <InfoCard
+                    cardBody="Brooklyn, NY 10036, United States"
+                    cardTitle="Visit our location"
+                    img={marker}
+                ></InfoCard>
+                <InfoCard
+                    cardBody="+000 123 456789"
+                    cardTitle="Contact us now"
+                    img={phone}
+                ></InfoCard>
+            </div>
         </div>
     );
 };
