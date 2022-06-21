@@ -132,7 +132,7 @@ const Login = () => {
                         </form>
                         <p>
                             <small>
-                                Dont have account?{" "}
+                                Don't have account?{" "}
                                 <Link className="text-primary" to="/signup">
                                     Create account
                                 </Link>
