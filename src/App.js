@@ -16,6 +16,7 @@ import Dashboard from "./Pages/Dashboard/Dashboard";
 import MyAppointments from "./Pages/Dashboard/MyAppointments";
 import AddDoctor from "./Pages/Dashboard/AddDoctor";
 import ManageDoctor from "./Pages/Dashboard/ManageDoctor";
+import ReviewSection from "./Pages/Review/ReviewSection";
 
 function App() {
     return (
@@ -24,6 +25,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
+                <Route path="/review" element={<ReviewSection />} />
                 <Route
                     path="appointment"
                     element={

@@ -27,9 +27,24 @@ const ReviewSection = () => {
             location: "California",
             img: people3,
         },
+        {
+            _id: 1,
+            name: "Winson Herry",
+            review: "",
+            location: "California",
+            img: people1,
+        },
+        {
+            _id: 2,
+            name: "Winson Herry",
+            review: "",
+            location: "California",
+            img: people2,
+        },
     ];
     return (
-        <div>
+        <div className="container mx-auto py-16">
+            <h1 className="text-xl lg:px-14 px-4 py-2">Reviews</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 place-content-center lg:px-14 px-4 mx-auto">
                 {reviews.map((review) => (
                     <Review key={review._id} review={review}></Review>
