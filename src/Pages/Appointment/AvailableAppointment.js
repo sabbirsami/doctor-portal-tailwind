@@ -32,11 +32,11 @@ const AvailableAppointment = ({ date }) => {
     // }, [formattedDate]);
     return (
         <div className="container mx-auto">
-            <h5 className="text-xl text-primary text-center ">
+            <h5 className="text-2xl text-green-500 pb-8 pt-16 lg:pl-16 pl-4">
                 Available Appointment on {format(date, "PP")}
             </h5>
-            <div className="py-14">
-                <div className="grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-14">
+            <div className="py-16">
+                <div className="grid grid-col-1 md:grid-cols-2  lg:grid-cols-3 gap-8 px-14">
                     {services.map((service) => (
                         <AppointmentService
                             key={service._id}

@@ -3,7 +3,7 @@ import teethImage from "../../assets/images/teeth-after.jpg";
 
 const PerfectSmile = () => {
     return (
-        <div className="lg:py-32">
+        <div className="lg:py-32 py-6">
             <div className="container mx-auto">
                 <div class="hero">
                     <div class="hero-content justify-between flex-col lg:flex-row-reverse">
