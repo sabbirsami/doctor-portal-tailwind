@@ -1,4 +1,6 @@
 import React from "react";
+import { MdLocationPin } from "react-icons/md";
+import { IoMdCall } from "react-icons/io";
 
 const Contact = () => {
     return (
@@ -10,21 +12,25 @@ const Contact = () => {
                             <div class="card-body">
                                 <div class="form-control">
                                     <label class="label">
-                                        <span class="label-text">Email</span>
+                                        <span class="label-text">
+                                            Your email address
+                                        </span>
                                     </label>
                                     <input
-                                        type="text"
-                                        placeholder="email"
+                                        type="email"
+                                        placeholder="Email"
                                         class="input input-bordered"
                                     />
                                 </div>
                                 <div class="form-control">
                                     <label class="label">
-                                        <span class="label-text">Email</span>
+                                        <span class="label-text">
+                                            Your name/ company's name
+                                        </span>
                                     </label>
                                     <input
                                         type="text"
-                                        placeholder="email"
+                                        placeholder="Name"
                                         class="input input-bordered"
                                     />
                                 </div>
@@ -34,13 +40,13 @@ const Contact = () => {
                                     </label>
                                     <textarea
                                         class="textarea textarea-bordered h-24"
-                                        placeholder="Bio"
+                                        placeholder="Write your massage here..."
                                     ></textarea>
                                 </div>
 
                                 <div class="form-control mt-6">
                                     <button class="btn btn-primary">
-                                        Login
+                                        Send
                                     </button>
                                 </div>
                             </div>
@@ -51,11 +57,21 @@ const Contact = () => {
                             </h1>
                             <h1 class="text-5xl py-8">
                                 Start by{" "}
-                                <span className="text-red-600 underline-offset-8">
+                                <span className="text-red-600 underline underline-offset-3">
                                     saying hi
                                 </span>
                             </h1>
-                            <p class="py-6">CONTACT</p>
+                            {/* <p class="pb-2 p-0">CONTACT</p>
+                            <p className="">
+                                <span>
+                                    <MdLocationPin className="inline mr-2" />
+                                    Dhaka, Bangladesh{" "}
+                                </span>{" "}
+                                <span>
+                                    {" "}
+                                    <IoMdCall></IoMdCall>
+                                </span>
+                            </p> */}
                         </div>
                     </div>
                 </div>
