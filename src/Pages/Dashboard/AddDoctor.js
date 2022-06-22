@@ -7,7 +7,9 @@ import Loading from "../Shared/Loading";
 const AddDoctor = () => {
     const imageUploadKey = "4890ef86cb137afcf283d9e2b184076a";
     const { data: services, isLoading } = useQuery("services", () =>
-        fetch("http://localhost:5000/service").then((res) => res.json())
+        fetch("https://teeth-health.herokuapp.com/service").then((res) =>
+            res.json()
+        )
     );
     const {
         register,
@@ -36,7 +38,7 @@ const AddDoctor = () => {
                         image: img,
                     };
                     //sent to your database
-                    fetch("http://localhost:5000/doctor", {
+                    fetch("https://teeth-health.herokuapp.com/doctor", {
                         method: "POST",
                         headers: {
                             "Content-Type": "application/json",

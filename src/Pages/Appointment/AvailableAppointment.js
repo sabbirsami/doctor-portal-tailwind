@@ -15,9 +15,9 @@ const AvailableAppointment = ({ date }) => {
         refetch,
         data: services,
     } = useQuery(["available", formattedDate], () =>
-        fetch(`http://localhost:5000/available?date=${formattedDate}`).then(
-            (res) => res.json()
-        )
+        fetch(
+            `https://teeth-health.herokuapp.com/available?date=${formattedDate}`
+        ).then((res) => res.json())
     );
     if (isLoading) {
         return <Loading></Loading>;
@@ -26,7 +26,7 @@ const AvailableAppointment = ({ date }) => {
         console.log(error);
     }
     // useEffect(() => {
-    //     fetch(`http://localhost:5000/available?date=${formattedDate}`)
+    //     fetch(`https://teeth-health.herokuapp.com/available?date=${formattedDate}`)
     //         .then((res) => res.json())
     //         .then((data) => setServices(data));
     // }, [formattedDate]);

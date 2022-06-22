@@ -9,7 +9,9 @@ const Users = () => {
         isLoading,
         refetch,
     } = useQuery("users", () =>
-        fetch("http://localhost:5000/user").then((res) => res.json())
+        fetch("https://teeth-health.herokuapp.com/user").then((res) =>
+            res.json()
+        )
     );
     if (isLoading) {
         return <Loading></Loading>;
@@ -17,7 +19,7 @@ const Users = () => {
 
     const makeAdmin = (email) => {
         console.log(users);
-        fetch(`http://localhost:5000/user/admin/${email}`, {
+        fetch(`https://teeth-health.herokuapp.com/user/admin/${email}`, {
             method: "PUT",
             headers: {
                 authorization: `Bearer ${localStorage.getItem("accessToken")}`,

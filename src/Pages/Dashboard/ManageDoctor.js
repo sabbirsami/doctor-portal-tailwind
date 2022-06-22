@@ -9,7 +9,9 @@ const ManageDoctor = () => {
         isLoading,
         refetch,
     } = useQuery("users", () =>
-        fetch("http://localhost:5000/doctor").then((res) => res.json())
+        fetch("https://teeth-health.herokuapp.com/doctor").then((res) =>
+            res.json()
+        )
     );
 
     if (isLoading) {
@@ -18,7 +20,7 @@ const ManageDoctor = () => {
     // const { email } = doctors;
     // console.log(doctors);
     const handleDelete = (email) => {
-        fetch(`http://localhost:5000/doctor/${email}`, {
+        fetch(`https://teeth-health.herokuapp.com/doctor/${email}`, {
             method: "DELETE",
         })
             .then((res) => res.json())
