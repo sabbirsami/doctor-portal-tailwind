@@ -8,7 +8,7 @@ const Contact = () => {
             <div className="container mx-auto">
                 <div class="hero lg:min-h-[70vh]">
                     <div class="hero-content flex-col lg:flex-row-reverse">
-                        <div class="card flex-shrink-0 w-full max-w-lg shadow-2xl bg-base-100">
+                        <div class="card lg:order-first order-last flex-shrink-0 w-full max-w-lg shadow-2xl bg-base-100">
                             <div class="card-body">
                                 <div class="form-control">
                                     <label class="label">
@@ -52,10 +52,10 @@ const Contact = () => {
                             </div>
                         </div>
                         <div class="text-center lg:text-left pr-22">
-                            <h1 class="text-5xl pb-4">
+                            <h1 class="lg:text-5xl text-4xl pb-4">
                                 Let's talk & make something amazing together.
                             </h1>
-                            <h1 class="text-5xl py-8">
+                            <h1 class="lg:text-5xl text-4xl py-8">
                                 Start by{" "}
                                 <span className="text-red-600 underline underline-offset-3">
                                     saying hi
