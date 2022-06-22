@@ -31,7 +31,7 @@ const Testimonial = () => {
     ];
     return (
         <section className="my-28 container mx-auto">
-            <div className="flex justify-between px-14">
+            <div className="flex justify-between lg:px-14 px-4">
                 <div>
                     <h4 className="text-xl font-bold text-primary py-2">
                         Testimonial
@@ -42,7 +42,7 @@ const Testimonial = () => {
                     <img src={quote} className="w-24 lg:w-48 " alt="" />
                 </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 place-content-center px-14 mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 place-content-center lg:px-14 px-4 mx-auto">
                 {reviews.map((review) => (
                     <Review key={review._id} review={review}></Review>
                 ))}
