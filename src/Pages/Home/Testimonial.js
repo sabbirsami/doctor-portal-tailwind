@@ -28,21 +28,28 @@ const Testimonial = () => {
             location: "California",
             img: people3,
         },
+        {
+            _id: 4,
+            name: "Kristin Yang",
+            review: "Collaboratively administrate empowered markets via plug-and-play networks after installed base benefits.",
+            location: "California",
+            img: "http://denticare.bold-themes.com/oscar/wp-content/uploads/sites/15/2020/01/client-03-160x160.jpg",
+        },
     ];
     return (
-        <section className="my-28 container mx-auto">
-            <div className="flex justify-between lg:px-14 px-4">
-                <div>
-                    <h4 className="text-xl font-bold text-primary py-2">
+        <section className="mb-28 mt-16 container mx-auto">
+            <div className="flex justify-between align-middle lg:px-14 px-4">
+                <div className="my-auto">
+                    <h4 className="text-xl font-bold text-primary">
                         Testimonial
                     </h4>
                     <h2 className="text-5xl ">What Our Patients Says</h2>
                 </div>
                 <div className="">
-                    <img src={quote} className="w-24 lg:w-48 " alt="" />
+                    <img src={quote} className="w-24 lg:w-48 lg:p-16" alt="" />
                 </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 place-content-center lg:px-14 px-4 mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 place-content-center lg:px-14 pt-8 px-4 mx-auto">
                 {reviews.map((review) => (
                     <Review key={review._id} review={review}></Review>
                 ))}
