@@ -17,6 +17,7 @@ import MyAppointments from "./Pages/Dashboard/MyAppointments";
 import AddDoctor from "./Pages/Dashboard/AddDoctor";
 import ManageDoctor from "./Pages/Dashboard/ManageDoctor";
 import ReviewSection from "./Pages/Review/ReviewSection";
+import Contact from "./Pages/Contact/Contact";
 
 function App() {
     return (
@@ -26,6 +27,7 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/review" element={<ReviewSection />} />
+                <Route path="/contact" element={<Contact></Contact>} />
                 <Route
                     path="appointment"
                     element={
