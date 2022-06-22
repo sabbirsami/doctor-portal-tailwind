@@ -5,12 +5,14 @@ import Service from "../Services/Service";
 import Appointment from "./Appointment";
 import Testimonial from "./Testimonial";
 import Banner from "./Banner";
+import PerfectSmile from "./PerfectSmile";
 
 const Home = () => {
     return (
         <div>
             <Banner></Banner>
             {/* <ProgressSection></ProgressSection> */}
+            <PerfectSmile></PerfectSmile>
             <Info></Info>
             <Service></Service>
             <Appointment></Appointment>
