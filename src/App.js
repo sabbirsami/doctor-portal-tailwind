@@ -18,6 +18,7 @@ import AddDoctor from "./Pages/Dashboard/AddDoctor";
 import ManageDoctor from "./Pages/Dashboard/ManageDoctor";
 import ReviewSection from "./Pages/Review/ReviewSection";
 import Contact from "./Pages/Contact/Contact";
+import Payment from "./Pages/Dashboard/Payment";
 
 function App() {
     return (
@@ -54,6 +55,7 @@ function App() {
                         element={<MyReview></MyReview>}
                     ></Route>
                     <Route path="users" element={<Users></Users>}></Route>
+                    <Route path="payment/:id" element={<Payment />}></Route>
                     <Route
                         path="addDoctor"
                         element={<AddDoctor></AddDoctor>}
