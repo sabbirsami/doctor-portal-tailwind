@@ -19,9 +19,12 @@ const Dashboard = () => {
                     <h2 className="pb-4 text-3xl font-bold text-secondary">
                         Dashboard
                     </h2>
-                    <h2 className="text-2xl pr-8 underline">
-                        Hi! {user.displayName}
-                    </h2>
+                    <div>
+                        <h2 className="text-2xl pr-8 underline">
+                            Hi! {user?.displayName}
+                        </h2>
+                        <small>{user?.email}</small>
+                    </div>
                 </div>
 
                 <Outlet></Outlet>
