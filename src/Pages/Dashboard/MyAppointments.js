@@ -64,7 +64,7 @@ const MyAppointments = () => {
                                             </button>
                                         </Link>
                                     )}
-                                    {/* {(a.price &&)(
+                                    {/* {a.price && (
                                         <Link to={``}>
                                             <span className="btn btn-xs btn-success">
                                                 pay
