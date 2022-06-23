@@ -1,14 +1,29 @@
 import React from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { Link, Outlet } from "react-router-dom";
+import auth from "../../firebase.init";
+import Loading from "../Shared/Loading";
 
 const Dashboard = () => {
+    const [user, loading, error] = useAuthState(auth);
+
+    if (loading) {
+        return <Loading></Loading>;
+    }
+    console.log(user);
     return (
         <div className="drawer drawer-mobile">
             <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
             <div className="drawer-content">
-                <h2 className="pb-4 text-3xl font-bold text-secondary">
-                    Dashboard
-                </h2>
+                <div className="flex justify-between align-middle">
+                    <h2 className="pb-4 text-3xl font-bold text-secondary">
+                        Dashboard
+                    </h2>
+                    <h2 className="text-2xl pr-8 underline">
+                        Hi! {user.displayName}
+                    </h2>
+                </div>
+
                 <Outlet></Outlet>
             </div>
             <div className="drawer-side">
