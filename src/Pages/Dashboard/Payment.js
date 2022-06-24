@@ -26,13 +26,14 @@ const Payment = () => {
     if (isLoading) {
         return <Loading></Loading>;
     }
+    console.log(appointment);
 
     return (
         <div>
             <div class="card w-50 max-w-md bg-base-100 shadow-xl my-12">
                 <div class="card-body">
                     <p className="text-success font-bold">
-                        Hello, {appointment.patientName}
+                        Hello, {appointment?.patientName}
                     </p>
                     <h2 class="card-title">
                         Please Pay for {appointment.treatment}
