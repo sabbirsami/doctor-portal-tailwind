@@ -58,7 +58,9 @@ const MyAppointments = () => {
                                 <td>{a.treatment}</td>
                                 <td>
                                     {a.price && (
-                                        <Link to={``}>
+                                        <Link
+                                            to={`/dashboard/payment/${a._id}`}
+                                        >
                                             <button className="btn btn-xs btn-success">
                                                 pay
                                             </button>
