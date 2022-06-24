@@ -12,6 +12,7 @@ const CheckoutForm = ({ appointment }) => {
 
     const { _id, price, patient, patientName } = appointment;
 
+    console.log(clientSecret);
     useEffect(() => {
         fetch("https://teeth-health.herokuapp.com/create-payment-intent", {
             method: "POST",
@@ -115,7 +116,7 @@ const CheckoutForm = ({ appointment }) => {
                 <button
                     className="btn btn-success btn-sm mt-4"
                     type="submit"
-                    disabled={!stripe || !clientSecret || success}
+                    disabled={!stripe || !clientSecret}
                 >
                     Pay
                 </button>

@@ -26,7 +26,6 @@ const Payment = () => {
     if (isLoading) {
         return <Loading></Loading>;
     }
-    console.log(appointment);
 
     return (
         <div>
